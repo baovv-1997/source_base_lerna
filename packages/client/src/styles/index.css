@@ -1,0 +1,33 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+@import url('font-face.css');
+
+@import './normalize';
+
+@layer utilities {
+}
+
+@layer components {
+  .border-normal {
+    @apply border border-solid border-gray-400 rounded-md overflow-hidden;
+  }
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}

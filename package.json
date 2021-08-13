@@ -1,0 +1,24 @@
+{
+  "name": "pikapaka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:client": "lerna run dev --scope client --stream",
+    "dev:server": "lerna run dev --scope server --stream",
+    "build:client": "lerna run build --scope client --stream",
+    "build:server": "lerna run build --scope server --stream",
+    "start": "lerna run start --scope server --stream",
+    "lint:server": "lerna run lint --scope server --stream",
+    "lint:client": "lerna run lint --scope client --stream"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

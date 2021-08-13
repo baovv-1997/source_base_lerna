@@ -1,0 +1,24 @@
+version: "3"
+services:
+  database:
+    container_name: pikapaka_db
+    image: arangodb/enterprise:3.7.10-ubi
+    env_file:
+      - .docker.database.env
+    ports:
+      - "8529:8529"
+    volumes:
+      - pikapaka_arangodb_data_container:/var/lib/arangodb3
+      - pikapaka_arangodb_apps_data_container:/var/lib/arangodb3-apps
+  app:
+    container_name: pikapaka_app
+    build:
+      context: .
+      dockerfile: ./app.Dockerfile
+    links:
+      - database
+    ports:
+      - "3001:3001"
+volumes:
+  pikapaka_arangodb_data_container:
+  pikapaka_arangodb_apps_data_container:

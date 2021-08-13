@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react",
+    "paths": {
+      "@configs/*": ["../configs/*"],
+      "@mockups/*": ["../mockData/*"],
+      "@public/*": ["../public/*"]
+    }
+  }
+}
